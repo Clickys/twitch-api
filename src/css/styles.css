@@ -1,0 +1,194 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+}
+body {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.twitch {
+    background-image: url(/src/images/games/fortnite.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: #e5c3d1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    min-width: 45%;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.twitch__title {
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 800;
+    border-bottom: 1px dashed #988b8e;
+    text-transform: uppercase;
+}
+
+.twitch__streamer {
+    padding: 1rem;
+    display: flex;
+    margin-bottom: 1.2rem;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+@media (min-width: 576px) {
+    .twitch__streamer {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+}
+
+@media (min-width: 1000px) {
+    .twitch__streamer {
+        display: flex;
+        flex-direction: row;
+    }
+}
+.twitch__streamer-logo {
+    width: 100px;
+    height: 100px;
+}
+@media (min-width: 576px) {
+    .twitch__streamer-logo {
+        margin-bottom: 1rem;
+    }
+}
+@media (min-width: 1000px) {
+    .twitch__streamer-logo {
+        margin: 0;
+    }
+}
+.streamer-logo-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 16px rgb(0, 0, 0, 0.5);
+}
+
+.twitch__streamer-info {
+    flex-grow: 3;
+    margin-left: 1rem;
+    max-width: 650px;
+    margin-right: auto;
+}
+@media (min-width: 576px) {
+    .twitch__streamer-info {
+        margin: 0 1rem;
+        text-align: center;
+    }
+}
+@media (min-width: 1000px) {
+    .twitch__streamer-info {
+        margin: 0;
+        text-align: left;
+    }
+}
+
+.online {
+    min-height: 15px;
+    min-width: 15px;
+    background-color: green;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.twitch__streamer-viewers {
+    font-weight: 300;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+}
+@media (min-width: 576px) {
+    .twitch__streamer-viewers {
+        margin-bottom: 0.5rem;
+    }
+}
+@media (min-width: 576px) {
+    .twitch__streamer-viewers {
+        margin-bottom: 0;
+    }
+}
+.viewers-icon {
+    color: #ec1313;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+@media (min-width: 576px) {
+    .viewers-icon {
+        margin: 1rem 0;
+        width: auto;
+    }
+}
+@media (min-width: 1000px) {
+    .viewers-icon {
+        margin: 0;
+    }
+}
+.games-selection {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.1);
+    max-width: 50rem;
+    margin: 2rem;
+    flex-wrap: wrap;
+}
+.game-box {
+    flex-basis: 4rem;
+}
+.game-icons {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+    transition: transform 2s;
+    animation-name: shakeIn;
+    animation-duration: 2s;
+}
+
+.game-icons:hover {
+    transform: scale(1.1) translateY(-10px);
+}
+
+@keyframes shakeIn {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(100px);
+    }
+
+    70% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+/* MEDIA QUERIES */
